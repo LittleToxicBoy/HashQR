@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="186dp"
+        android:layout_height="205dp"
+        android:layout_marginTop="52dp"
+        android:src="@drawable/escritorio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_cadena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:ems="10"
+        android:hint="Hola Mundo"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/btn_256"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="cadena"
+        android:text="Ingrese cadena a transformar"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_cadena"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.733" />
+
+    <Button
+        android:id="@+id/btn_256"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="196dp"
+        android:onClick="btnH_256"
+        android:text="SHA 256"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/btn_512"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:onClick="btn_512"
+        android:text="SHA-512"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_256" />
+
+    <Button
+        android:id="@+id/btn_384"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="btnH_386"
+        android:text="SHA-384"
+        app:layout_constraintBottom_toTopOf="@+id/btn_512"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_256"
+        app:layout_constraintVertical_bias="0.741" />
+
+    <RadioGroup
+        android:id="@+id/rg_Calidad"
+        android:layout_width="128dp"
+        android:layout_height="153dp"
+        android:layout_marginBottom="124dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_384"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.994">
+
+        <RadioButton
+            android:id="@+id/btn_baja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calidad Baja"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/btn_media"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calidad Media" />
+
+        <RadioButton
+            android:id="@+id/btn_alta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calidad Alta" />
+
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
